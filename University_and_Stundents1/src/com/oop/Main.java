@@ -5,9 +5,9 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
         //creating students
-        Student student1 = new Student(19,8,"Ion");
-        Student student2 = new Student(19,7,"Oleg");
-        Student student3 = new Student(8,9,"Maxim");
+//        Student student1 = new Student(19,8,"Ion");
+//        Student student2 = new Student(19,7,"Oleg");
+//        Student student3 = new Student(8,9,"Maxim");
 //        //assigning age to students
 //        student1.age=19;
 //        student2.age=19;
@@ -22,6 +22,11 @@ public class Main {
 //        student3.name="Maxim";
 
         University university = new University("UTM",1990);
+        University.addStudent(8,20,"Ion");
+        University.addStudent(9,21,"Petru");
+        University.addStudent(7,19,"Oleg");
+
+
 //        university.name="UTM";
 //        university.foundationYear=1990;
 //        System.out.println(university.name + university.anul + university.student);
