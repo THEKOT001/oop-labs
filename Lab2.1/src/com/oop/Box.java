@@ -15,9 +15,9 @@ public class Box {
         this.depth=a;
     }
     public Box(int a,int b,int c){
-        this.width=1;
-        this.height=1;
-        this.depth=1;
+        this.width=a;
+        this.height=b;
+        this.depth=c;
     }
     public int calcArea(){
         int area = 2*(height*width + width*depth + depth*height);
@@ -31,3 +31,4 @@ public class Box {
 
 
 }
+
