@@ -1,38 +1,46 @@
 package com.oop;
 
+
+
 public class Main {
+    public static void printStudents(University u) {
+        System.out.println(u.name + " : " + u.foundationYear);
+        int size = u.getStudents().size();
+        System.out.println("Students : " + (size > 0 ? size + " : ": size));
+        for (Student student: u.getStudents()) {
+            System.out.println(student);
+        }
+
+        System.out.println();
+    }
 
     public static void main(String[] args) {
-	// write your code here
-        //creating students
-//        Student student1 = new Student(19,8,"Ion");
-//        Student student2 = new Student(19,7,"Oleg");
-//        Student student3 = new Student(8,9,"Maxim");
-//        //assigning age to students
-//        student1.age=19;
-//        student2.age=19;
-//        student3.age=20;
-//        //assigning marks to students
-//        student1.mark=8;
-//        student2.mark=7;
-//        student3.mark=9;
-//        //assigning names to students
-//        student1.name="Ion";
-//        student2.name="Oleg";
-//        student3.name="Maxim";
 
         University university = new University("UTM",1990);
-        University.addStudent(8,20,"Ion");
+        university.addStudent(8,20,"Ion");
         University.addStudent(9,21,"Petru");
         University.addStudent(7,19,"Oleg");
+        printStudents(university);
+        System.out.println("Average " + university.name + " : " + university.calcAverageMark());
+        System.out.println("--------------------------");
+
+        University university1 = new University("University of jokes",1800);
+        University.addStudent(6,20,"Andrei");
+        University.addStudent(9,21,"Igor");
+        University.addStudent(7,19,"Vlad");
+        System.out.println(university1.foundationYear+university1.name);
+        System.out.println("Average " + university1.name + " : " + university1.calcAverageMark());
+        System.out.println("--------------------------");
+
+        University university2 = new University("University of building",2010);
+        University.addStudent(6,20,"Cristian");
+        University.addStudent(8,21,"Lilian");
+        University.addStudent(7,19,"Stefan");
+        System.out.println(university2.foundationYear+university2.name);
+        System.out.println("Average " + university2.name + " : " + university2.calcAverageMark());
+        System.out.println("--------------------------");
+        System.out.println();
 
 
-//        university.name="UTM";
-//        university.foundationYear=1990;
-//        System.out.println(university.name + university.anul + university.student);
-//        university.student[0]=student1;
-//        university.student[1]=student2;
-//        university.student[2]=student3;
-//        System.out.println(student1);
     }
 }
